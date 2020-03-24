@@ -9,12 +9,13 @@
 </head>
 
 <body>
+    <!-- Basic button that runs a function -->
     <div id="panicBtn">
         <!-- v-on directive listens to DOM events and runs some JavaScript when it is triggered. -->
         <button v-on:click="counter += 1">Do Not Click</button>
         <p>The button above has been clicked {{counter}} times.</p>
     </div>
-
+    <!-- Nav bar that shows where you currently are -->
     <!-- the click event will no longer reload the page -->
     <div id="navbar">
         <nav class="active" v-on:click.prevent>
@@ -26,10 +27,9 @@
         </nav>
         <p class="chosen-color">You chose <b>{{active}}</b></p>
     </div>
-
+    <!-- Input field that updates as user types -->
     <!-- v-cloak hides uncompiled data until the Vue Instance is ready -->
     <!-- v-on:click.stop is an event handler for clicks, with a modifier that stops event propagation. -->
-
     <div id="username" v-cloak v-on:click="hideName">
         <!-- v-if makes sure the name is shown only when the "displayName" variable is truthful -->
         <div class="entername" v-on:click.stop v-if="displayName">
@@ -37,6 +37,24 @@
         </div>
         <p v-on:click.stop="toggleName">{{text_content}}</p>
     </div>
+    <!-- Price calculator -->
+    <form id="menuprices">
+        <h1>Order Food</h1>
+        <ul>
+            <!-- Looping through the food array, assign on click handler, and toggle the "current" css class -->
+            <li v-for="item in menu" v-on:click="toggleMeal(item)" v-bind:class="{'current':item.current}">
+                <!--  vue has a currency filter to format price
+                these are the results from the loop, displaying name and price for each -->
+                {{item.name}}<span> {{item.price | currency}}</span>
+            </li>
+        </ul>
+        <div class="total">
+            Total: <span>{{total()| currency}}</span>
+        </div>
+
+
+    </form>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
     <script src="script.js"></script>

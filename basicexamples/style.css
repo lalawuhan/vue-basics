@@ -64,3 +64,26 @@ input[type="text"] {
     border-radius: 4px;
     box-sizing: border-box;
 }
+form {
+    margin: 2em;
+}
+form ul {
+    list-style: none;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+    text-align: left;
+    margin: 20px 15px;
+}
+form ul li.current {
+    background-color: #8ec16d;
+}
+form ul li {
+    padding: 20px 30px;
+    background-color: grey;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+div.total span {
+    float: right;
+}
