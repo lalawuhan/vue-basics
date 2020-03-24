@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: calc(0.7em + 1vw);
+    font-family: "Nunito", sans-serif;
+}
+button {
+    font-size: inherit;
+}
+input {
+    font-size: inherit;
+}
+
+#panicBtn button {
+    background-color: red;
+    color: white;
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    margin: 2em auto;
+}
+p {
+    margin: 1em 0;
+}
+.active a {
+    text-decoration: none;
+    padding: 14px 25px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+}
+.active .blue {
+    background-color: #4285f4;
+}
+.active .red {
+    background-color: #db4437;
+}
+.active .mustard {
+    background-color: #f4b400;
+}
+.active .green {
+    background-color: #0f9d58;
+}
+.chosen-color b {
+    color: #ffffff;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #c4d7e0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}

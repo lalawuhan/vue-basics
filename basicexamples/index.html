@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,13 +16,15 @@
     </div>
 
     <!-- the click event will no longer reload the page -->
-    <div id="navbar" class="active" v-on:click.prevent>
-        <nav>
-            <a href="#" class="template">Blue Color</a>
-            <a href="#" class="template">Green Color</a>
-            <a href="#" class="template">Mustard Color</a>
-            <a href="#" class="template">Red Color</a>
+    <div id="navbar">
+        <nav class="active" v-on:click.prevent>
+            <a href="#" class="blue" v-on:click="showActive('Blue')"> Blue Button</a>
+            <a href="#" class="green" v-on:click="showActive('Green')">Green Button</a>
+            <a href="#" class="mustard" v-on:click="showActive('Mustard')">Mustard Button</a>
+            <a href="#" class="red" v-on:click="showActive('Red')">Red Button</a>
+
         </nav>
+        <p class="chosen-color">You chose <b>{{active}}</b></p>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
     <script src="script.js"></script>
