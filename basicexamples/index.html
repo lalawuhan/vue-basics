@@ -26,6 +26,18 @@
         </nav>
         <p class="chosen-color">You chose <b>{{active}}</b></p>
     </div>
+
+    <!-- v-cloak hides uncompiled data until the Vue Instance is ready -->
+    <!-- v-on:click.stop is an event handler for clicks, with a modifier that stops event propagation. -->
+
+    <div id="username" v-cloak v-on:click="hideName">
+        <!-- v-if makes sure the name is shown only when the "displayName" variable is truthful -->
+        <div class="entername" v-on:click.stop v-if="displayName">
+            <input type="text" v-model="text_content" />
+        </div>
+        <p v-on:click.stop="toggleName">{{text_content}}</p>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
     <script src="script.js"></script>
 </body>

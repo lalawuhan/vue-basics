@@ -54,3 +54,13 @@ p {
     text-transform: uppercase;
     font-size: 0.8em;
 }
+[v-cloak] {
+    display: none;
+}
+input[type="text"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

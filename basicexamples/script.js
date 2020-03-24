@@ -16,3 +16,19 @@ var navChoose = new Vue({
         }
     }
 });
+var userName = new Vue({
+    el: "#username",
+    data: {
+        displayName: false,
+        text_content: "Write your name"
+    },
+    methods: {
+        // When a model is changed, the view will be automatically updated.
+        hideName: function() {
+            this.displayName = false;
+        },
+        toggleName: function() {
+            this.displayName = !this.displayName;
+        }
+    }
+});
