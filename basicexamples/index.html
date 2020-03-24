@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+</head>
+
+<body>
+    <div id="panicBtn">
+        <!-- v-on directive listens to DOM events and runs some JavaScript when it is triggered. -->
+        <button v-on:click="counter += 1">Do Not Click</button>
+        <p>The button above has been clicked {{counter}} times.</p>
+    </div>
+
+    <!-- the click event will no longer reload the page -->
+    <div id="navbar" class="active" v-on:click.prevent>
+        <nav>
+            <a href="#" class="template">Blue Color</a>
+            <a href="#" class="template">Green Color</a>
+            <a href="#" class="template">Mustard Color</a>
+            <a href="#" class="template">Red Color</a>
+        </nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
